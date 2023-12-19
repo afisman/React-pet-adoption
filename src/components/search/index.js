@@ -19,7 +19,12 @@ const Search = () => {
     }
 
     // use createSearchParams 
-    const query = "REPLACE ME";
+    const query = createSearchParams(searchQuery);
+
+    navigate({
+      pathname: `/search`,
+      search: `?${query}`
+    })
 
     // imperatively redirect with useNavigate() returned function
   };
